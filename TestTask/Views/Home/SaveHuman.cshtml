@@ -1,0 +1,30 @@
+﻿@model HumanModel
+@{
+    ViewData["Title"] = "Сохранение данных";
+}
+
+<h1 class="w-50 mt-5 mb-5 mx-auto text-center">Форма сохранения данных</h1>
+
+<form asp-action="SaveHuman" asp-controller="Home" class="container h-100 mt-3 w-50" method="post">
+	<div asp-validation-summary="All"></div>
+    <div class="form-group mb-3">
+        <label class="mb-2">Фамилия</label>
+        <input type="text" asp-for="Surname" class="form-control" placeholder="Введите фамилию">
+    </div>
+    <div class="form-group mb-3">
+        <label class="mb-2">Имя</label>
+        <input type="text" asp-for="Name" class="form-control" placeholder="Введите имя">
+    </div>
+    <div class="form-group mb-3">
+        <label class="mb-2">Отчество (при наличии)</label>
+        <input type="text" asp-for="Patronymic" class="form-control" placeholder="Введите отчество">
+    </div>
+    <div class="form-group w-25 mb-3">
+        <label class="mb-2">Дата рождения</label>
+        <input type="date" asp-for="DateBirth" class="form-control">
+    </div>
+    
+    <button type="submit" class="btn btn-success mt-3 w-100">Сохранить данные</button>
+</form>
+
+
